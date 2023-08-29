@@ -1,0 +1,111 @@
+* {
+    box-sizing:border-box;
+}
+body {
+    margin: auto;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: beige;
+}
+.header {
+    width: 60%;
+    border: 1px solid lightgray;
+    border-radius: 50px; 
+    padding:50px;
+    text-align: center;
+}
+.content {
+    padding:10px;
+    display: block;
+    justify-content: center;
+    width: 60%;
+    background-color: rgb(236, 213, 171);
+    text-align: center;
+    border-radius: 50px;
+}
+
+p {
+    margin:auto;
+    margin-top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+}
+
+.dots {
+    display:flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+div .dot 
+{
+    display:block;
+    position: relative;
+    top:0px;
+    left: 15px;
+    width:10px;
+    height:10px;
+    transform: scale(0.1);
+    box-shadow: 0 0 10px rgb(219, 135, 25), 
+                0 0 20px rgb(219, 135, 25),
+                0 0 30px rgb(219, 135, 25),
+                0 0 40px rgb(219, 135, 25),
+                0 0 50px rgb(219, 135, 25);
+    background-color: rgb(219, 135, 25);
+    border-radius: 50%;
+    animation: animatedDot 2s linear infinite;
+    animation-delay: calc(0.1s * var(--a));
+}
+div .seccond:last-child .dot 
+{
+    animation-delay: calc(-0.1s * var(--a)); 
+}
+
+
+@keyframes animatedDot {
+    0% 
+    {
+        transform: scale(0.1);
+    }
+    10% 
+    {
+        transform: scale(1.0);
+    }
+    50%,100%
+    {
+        transform: scale(0.1);
+    }
+}
+
+
+button {
+    background-color: rgb(219, 116, 19);
+    font-size: 1.2em;
+    font-family: console;
+    border-bottom: 1px solid white  ;
+    border-right: 1px solid white ;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+button:hover {
+    background-color: rgb(250, 168, 92);
+    border-bottom: 1px solid white  ;
+    border-right: 1px solid white ;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+
+}
+button:active {
+    border-bottom: 1px solid black  ;
+    border-right: 1px solid black ;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
